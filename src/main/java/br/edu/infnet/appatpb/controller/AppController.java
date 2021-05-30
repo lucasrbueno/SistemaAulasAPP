@@ -16,4 +16,9 @@ public class AppController {
 	public String telaCadastro() {
 		return "usuario/cadastro";
 	}
+        
+        @RequestMapping(value = "/autor", method = RequestMethod.GET)
+	public String telaCadastroAutor() {
+		return "autor/cadastro";
+	}
 }
