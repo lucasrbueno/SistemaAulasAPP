@@ -15,8 +15,8 @@ public class UsuarioController {
     @PostMapping(value = "/usuario/incluir")
     public String incluir(Usuario usuario) {
 
-            usuarioService.incluir(usuario);
+        usuarioService.incluir(usuario);
 
-            return "redirect:/";
+        return "redirect:/";
     }
 }

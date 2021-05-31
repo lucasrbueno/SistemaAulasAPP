@@ -1,10 +1,32 @@
 
 package br.edu.infnet.appatpb.model.negocio;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TTexto")
 public class Texto extends Recurso{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    
     private int quantidadeLinhas;
     private String fonteDaLetra;
-    private String linkReferência;
+    private String linkReferencia;
+
+    public Texto(int quantidadeLinhas, String fonteDaLetra, String linkReferencia) {
+        this.quantidadeLinhas = quantidadeLinhas;
+        this.fonteDaLetra = fonteDaLetra;
+        this.linkReferencia = linkReferencia;
+    }
+
+    public Texto() {
+    }
 
     public int getQuantidadeLinhas() {
         return quantidadeLinhas;
@@ -22,16 +44,16 @@ public class Texto extends Recurso{
         this.fonteDaLetra = fonteDaLetra;
     }
 
-    public String getLinkReferência() {
-        return linkReferência;
+    public String getLinkReferencia() {
+        return linkReferencia;
     }
 
-    public void setLinkReferência(String linkReferência) {
-        this.linkReferência = linkReferência;
+    public void setLinkReferencia(String linkReferencia) {
+        this.linkReferencia = linkReferencia;
     }
 
     @Override
     public String toString() {
-        return super.toString() + quantidadeLinhas + fonteDaLetra + linkReferência; 
+        return super.toString() + quantidadeLinhas + fonteDaLetra + linkReferencia; 
     }
 }

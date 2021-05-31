@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.infnet.appatpb.model.service;
 
-/**
- *
- * @author Lucas
- */
+import br.edu.infnet.appatpb.model.negocio.Video;
+import br.edu.infnet.appatpb.model.repository.IVideoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class VideoService {
     
+    @Autowired
+    private IVideoRepository videoRepository;
+    
+    public void incluir(Video video) {
+        videoRepository.save(video);
+    }
 }

@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.infnet.appatpb.controller;
 
-/**
- *
- * @author Lucas
- */
-public class ImagemController {
-    
+import br.edu.infnet.appatpb.model.negocio.Imagem;
+import br.edu.infnet.appatpb.model.service.ImagemService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class ImagemController{
+	
+    @Autowired
+    private ImagemService imagemService;
+
+    @PostMapping(value = "/imagem/incluir")
+    public String incluir(Imagem imagem) {
+
+        imagemService.incluir(imagem);
+
+        return "redirect:/";
+    }
 }

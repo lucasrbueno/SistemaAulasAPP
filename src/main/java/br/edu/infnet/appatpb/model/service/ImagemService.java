@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.infnet.appatpb.model.service;
 
-/**
- *
- * @author Lucas
- */
+import br.edu.infnet.appatpb.model.negocio.Imagem;
+import br.edu.infnet.appatpb.model.repository.IImagemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class ImagemService {
     
+    @Autowired
+    private IImagemRepository imagemRepository;
+    
+    public void incluir(Imagem imagem) {
+        imagemRepository.save(imagem);
+    }
 }

@@ -7,23 +7,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container">
+        <form action="/usuario/incluir" method="post">
 
-	<div class="container">
-		<form action="/usuario/incluir" method="post">
-		
-			<div class="form-group">
-			  <label>Nome:</label>
-			  <input type="text" class="form-control" name="nome" value="Elberth Moraes">
-			</div>			
-			
-			<div class="form-group">
-			  	<label>E-mail:</label>
-				<input type="email" class="form-control" name="email" value="elberth.moraes@prof.infnet.edu.br">
-			</div>
-				
-			<button type="submit">Cadastro</button>
-		</form>
-	</div>
+            <div class="form-group">
+              <label>Nome:</label>
+              <input type="text" class="form-control" name="nome" value="Lucas">
+            </div>			
+
+            <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" class="form-control" name="email" value="lucas.bueno@prof.infnet.edu.br">
+            </div>
+
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
 	
 </body>
 </html>

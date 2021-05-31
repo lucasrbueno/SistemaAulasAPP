@@ -67,8 +67,4 @@ public class Autor {
                 nome,
                 empregado);
     }  
-    
-//    public static void incrementarID(Integer id){
-//        
-//    }
 }

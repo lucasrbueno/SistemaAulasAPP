@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.infnet.appatpb.controller;
 
-/**
- *
- * @author Lucas
- */
-public class TextoController {
-    
+import br.edu.infnet.appatpb.model.negocio.Texto;
+import br.edu.infnet.appatpb.model.service.TextoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class TextoController{
+	
+    @Autowired
+    private TextoService textoService;
+
+    @PostMapping(value = "/texto/incluir")
+    public String incluir(Texto texto) {
+
+        textoService.incluir(texto);
+
+        return "redirect:/";
+    }
 }

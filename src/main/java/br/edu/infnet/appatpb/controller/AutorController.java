@@ -15,8 +15,8 @@ public class AutorController{
     @PostMapping(value = "/autor/incluir")
     public String incluir(Autor autor) {
 
-            autorService.incluir(autor);
+        autorService.incluir(autor);
 
-            return "redirect:/";
+        return "redirect:/";
     }
 }
