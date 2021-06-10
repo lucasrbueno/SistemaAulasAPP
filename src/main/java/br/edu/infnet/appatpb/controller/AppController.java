@@ -8,32 +8,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AppController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String telaInicial() {
-		return "index";
-	}
-
-	@RequestMapping(value = "/usuario", method = RequestMethod.GET)
-	public String telaCadastro() {
-		return "usuario/cadastro";
-	}
+	public String telaLogin() {
+            return "login";
+	}      
         
-        @RequestMapping(value = "/autor", method = RequestMethod.GET)
-	public String telaCadastroAutor() {
-		return "autor/cadastro";
-	}
+        @RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String telaIndex() {
+            return "index";
+	}  
         
         @RequestMapping(value = "/texto", method = RequestMethod.GET)
 	public String telaCadastroTexto() {
-		return "texto/cadastro";
+            return "texto/cadastro";
 	}
         
         @RequestMapping(value = "/imagem", method = RequestMethod.GET)
 	public String telaCadastroImagem() {
-		return "imagem/cadastro";
+            return "imagem/cadastro";
 	}
         
         @RequestMapping(value = "/video", method = RequestMethod.GET)
 	public String telaCadastroVideo() {
-		return "video/cadastro";
+            return "video/cadastro";
 	}
 }

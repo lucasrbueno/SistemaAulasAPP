@@ -5,21 +5,35 @@ import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appatpb.model.negocio.Usuario;
 import br.edu.infnet.appatpb.model.repository.IUsuarioRepository;
+import java.util.List;
 
 @Service
 public class UsuarioService {
 	
     @Autowired
-    private IUsuarioRepository pessoaRepository;
+    private IUsuarioRepository usuarioRepository;
 
-    public String obterStatus(Usuario pessoa) {
+    public String obterStatus(Usuario usuario) {
 
-            return pessoa.calcularSalarioAnual() > 999 ? 
-                            pessoa.getNome() + ", que pessoa rica" : 
-                                    "Poxa, "+ pessoa.getNome()+"!!! Tá difícil, né?!";  
+        return usuario.calcularSalarioAnual() > 999 ? 
+                            usuario.getNome() + ", que pessoa rica" : 
+                                    "Poxa, "+ usuario.getNome()+"!!! Tá difícil, né?!";  
     }
 
-    public void incluir(Usuario pessoa) {
-            pessoaRepository.save(pessoa);
+    public void incluir(Usuario usuario) {
+        usuarioRepository.save(usuario);
+    }
+
+    public List<Usuario> obterLista() {
+        return (List<Usuario>) usuarioRepository.findAll();
+    }
+
+    public void excluir(Integer id) {
+        usuarioRepository.deleteById(id);
+    }
+
+    public Usuario autenticacao(String email, String senha){
+        
+        return usuarioRepository.autenticacao(email, senha);
     }
 }

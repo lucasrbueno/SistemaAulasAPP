@@ -11,7 +11,8 @@
         <div class="jumbotron text-center">
             <h1>Projeto de Bloco - AT</h1>
             
-            <h3>Lucas Bueno</h3>
+            <h3>Bem vindo, ${user.nome}</h3>
+            <h3>${user.email}</h3>
             
             <p>Página Inicial!</p> 
         </div>
@@ -20,11 +21,11 @@
             <div class="row">
               <div class="col-sm-4">
                 <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/lucas-ramalho-bueno/" target="blank">Visitem meu LinkedIn</a></p>
+                <p><a href="https://www.linkedin.com/in/lucas-ramalho-bueno/" target="blank">Visite meu LinkedIn</a></p>
               </div>
               <div class="col-sm-4">
                 <h3>GitHub</h3>
-                <p><a href="https://github.com/lucasrbueno" target="blank">Visitem meu GitHub</a></p>
+                <p><a href="https://github.com/lucasrbueno" target="blank">Visite meu GitHub</a></p>
               </div>
               <div class="col-sm-4">
                 <h3>Cadastros</h3>        
@@ -38,14 +39,3 @@
         </div>       
     </body>
 </html>
-<!--        <h1>TELA INICIAL</h1>
-	
-	<h2>Projeto de Bloco</h2>
-	
-	<h3>Lucas Ramalho Bueno</h3>
-	
-	<a href="/usuario">Realize o cadastro de usuários</a>
-        <a href="/autor">Realize o cadastro de autores</a>
-        <a href="/imagem">Realize o cadastro de imagens</a>
-        <a href="/video">Realize o cadastro de videos</a>
-        <a href="/texto">Realize o cadastro de textos</a>-->
