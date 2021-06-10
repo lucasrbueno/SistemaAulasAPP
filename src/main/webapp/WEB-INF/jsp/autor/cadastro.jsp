@@ -34,29 +34,29 @@
             </form>
             <br>
             <c:if test="${not empty autores}">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Cargo</th>
-                    <th>Empregado</th>
-                    <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <c:forEach var="s" items="${autores}">
+                <table class="table table-striped">
+                  <thead>
                     <tr>
-                        <td>${s.id}</td>
-                        <td>${s.nome}</td>
-                        <td>${s.cargo}</td>
-                        <td>${s.empregado ? 'Sim' : 'Não'}</td>
-                        <td><a href="/autor/${s.id}/excluir">Excluir</a></td>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Empregado</th>
+                        <th></th>
                     </tr>
-                </c:forEach>
-              </tbody>
-            </table>
-        </c:if>
+                  </thead>
+                  <tbody>
+                    <c:forEach var="s" items="${autores}">
+                        <tr>
+                            <td>${s.id}</td>
+                            <td>${s.nome}</td>
+                            <td>${s.cargo}</td>
+                            <td>${s.empregado ? 'Sim' : 'Não'}</td>
+                            <td><a href="/autor/${s.id}/excluir">Excluir</a></td>
+                        </tr>
+                    </c:forEach>
+                  </tbody>
+                </table>
+            </c:if>
             
         </div>        
     </body>

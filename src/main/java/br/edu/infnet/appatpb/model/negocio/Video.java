@@ -27,6 +27,14 @@ public class Video extends Recurso{
     public Video() {
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public boolean isMp4() {
         return mp4;
     }

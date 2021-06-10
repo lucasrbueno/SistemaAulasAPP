@@ -17,7 +17,7 @@ public class Imagem extends Recurso {
     private boolean png;
     private float tamanho;
     private String placeholder;
-
+    
     public Imagem(boolean png, float tamanho, String placeholder) {
         this.png = png;
         this.tamanho = tamanho;
@@ -27,6 +27,14 @@ public class Imagem extends Recurso {
     public Imagem() {
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    
     public boolean isPng() {
         return png;
     }

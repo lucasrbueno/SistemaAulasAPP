@@ -1,4 +1,3 @@
-
 package br.edu.infnet.appatpb.model.negocio;
 
 import javax.persistence.Entity;
@@ -16,16 +15,24 @@ public class Texto extends Recurso{
     private Integer id;
     
     private int quantidadeLinhas;
-    private String fonteDaLetra;
+    private String fonteLetra;
     private String linkReferencia;
 
-    public Texto(int quantidadeLinhas, String fonteDaLetra, String linkReferencia) {
+    public Texto(int quantidadeLinhas, String fonteLetra, String linkReferencia) {
         this.quantidadeLinhas = quantidadeLinhas;
-        this.fonteDaLetra = fonteDaLetra;
+        this.fonteLetra = fonteLetra;
         this.linkReferencia = linkReferencia;
     }
 
     public Texto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public int getQuantidadeLinhas() {
@@ -36,12 +43,12 @@ public class Texto extends Recurso{
         this.quantidadeLinhas = quantidadeLinhas;
     }
 
-    public String getFonteDaLetra() {
-        return fonteDaLetra;
+    public String getFonteLetra() {
+        return fonteLetra;
     }
 
-    public void setFonteDaLetra(String fonteDaLetra) {
-        this.fonteDaLetra = fonteDaLetra;
+    public void setFonteLetra(String fonteLetra) {
+        this.fonteLetra = fonteLetra;
     }
 
     public String getLinkReferencia() {
@@ -54,6 +61,6 @@ public class Texto extends Recurso{
 
     @Override
     public String toString() {
-        return super.toString() + quantidadeLinhas + fonteDaLetra + linkReferencia; 
+        return super.toString() + quantidadeLinhas + fonteLetra + linkReferencia; 
     }
 }

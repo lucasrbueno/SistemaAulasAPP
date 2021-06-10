@@ -15,20 +15,5 @@ public class AppController {
         @RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String telaIndex() {
             return "index";
-	}  
-        
-        @RequestMapping(value = "/texto", method = RequestMethod.GET)
-	public String telaCadastroTexto() {
-            return "texto/cadastro";
-	}
-        
-        @RequestMapping(value = "/imagem", method = RequestMethod.GET)
-	public String telaCadastroImagem() {
-            return "imagem/cadastro";
-	}
-        
-        @RequestMapping(value = "/video", method = RequestMethod.GET)
-	public String telaCadastroVideo() {
-            return "video/cadastro";
-	}
+	}                
 }

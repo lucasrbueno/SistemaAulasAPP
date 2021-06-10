@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,28 +11,52 @@
 <body>
     <div class="container">
         
-        <h1>Cadastro de VÌdeos</h1>
+        <h1>Cadastro de V√≠deos</h1>
         
         <form action="/video/incluir" method="post">
 
             <div class="form-group">
-              <label>Link do vÌdeo:</label>
-              <input type="url" class="form-control" name="video" value="https://www.youtube.com/">
+              <label>Link do v√≠deo:</label>
+              <input type="url" class="form-control" name="link" value="https://www.youtube.com/">
             </div>			
 
             <div class="form-group">
-                <label>DuraÁ„o</label>
-                <input type="text" class="form-control" name="email" value="5:00">
+                <label>Dura√ß√£o</label>
+                <input type="number" class="form-control" name="duracao" value="5.00">
             </div>
             
-            <label>Est· em MP4?</label>
+            <label>Est√° em MP4?</label>
                 <div class="form-group">
                     <input type="radio" name="mp4" value="true"> Sim <br>
-                    <input type="radio" name="mp4" value="false"> N„o <br>
+                    <input type="radio" name="mp4" value="false"> N√£o <br>
                 </div>
 
             <button type="submit">Confirmar</button>
         </form>
+        <c:if test="${not empty videos}">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Link do v√≠deo</th>
+                    <th>Dura√ß√£o</th>
+                    <th>MP4?</th>
+                    <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <c:forEach var="v" items="${videos}">
+                    <tr>
+                        <td>${v.id}</td>
+                        <td>${v.link}</td>
+                        <td>${v.duracao}</td>
+                        <td>${v.mp4 ? 'Sim' : 'N√£o'}</td>
+                        <td><a href="/video/${v.id}/excluir">Excluir</a></td>
+                    </tr>
+                </c:forEach>
+              </tbody>
+            </table>
+        </c:if>
     </div>	
 </body>
 </html>
