@@ -10,11 +10,12 @@
     <body>
         <div class="jumbotron text-center">
             <h1>Projeto de Bloco - AT</h1>
+            <h1>Lucas Ramalho Bueno</h1>
+            <br>
             
             <h3>Bem vindo, ${user.nome}</h3>
             <h3>${user.email}</h3>
             
-            <p>Página Inicial!</p> 
         </div>
         
         <div class="container">
@@ -31,6 +32,7 @@
                 <h3>Cadastros</h3>        
                 <a href="/usuario">Realize o cadastro de usuários</a> <br>
                 <a href="/autor">Realize o cadastro de autores</a> <br>
+                <a href="/aula">Realize o cadastro de aulas</a> <br>
                 <a href="/imagem">Realize o cadastro de imagens</a> <br>
                 <a href="/video">Realize o cadastro de videos</a> <br>
                 <a href="/texto">Realize o cadastro de textos</a> <br>

@@ -29,7 +29,7 @@
                 <input type="url" class="form-control" name="linkReferencia" value="https://g1.globo.com/">
             </div>
 
-            <button type="submit">Confirmar</button>
+            <button class="btn btn-primary" type="submit">Confirmar</button> 
         </form>
         <br>
         <c:if test="${not empty textos}">

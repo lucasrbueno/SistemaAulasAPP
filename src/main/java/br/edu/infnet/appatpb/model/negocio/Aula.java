@@ -1,24 +1,43 @@
 package br.edu.infnet.appatpb.model.negocio;
 
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "TAula")
 public class Aula {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     private String materia;
     private String diaDaSemana;
     private boolean arquivo;
     
-    private List<Recurso> recurso;
-    private Autor autor;
+//    private List<Recurso> recurso;
+//    private Autor autor;
 
-    public Autor getAutor() {
-        return autor;
+    public Aula() {
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public Aula(String materia, String diaDaSemana, boolean arquivo) {
+        this.materia = materia;
+        this.diaDaSemana = diaDaSemana;
+        this.arquivo = arquivo;
     }
+
+//    public Autor getAutor() {
+//        return autor;
+//    }
+//
+//    public void setAutor(Autor autor) {
+//        this.autor = autor;
+//    }
 
     public String getMateria() {
         return materia;
@@ -36,13 +55,13 @@ public class Aula {
         this.id = id;
     }
 
-    public List<Recurso> getRecurso() {
-        return recurso;
-    }
-
-    public void setRecurso(List<Recurso> recurso) {
-        this.recurso = recurso;
-    }
+//    public List<Recurso> getRecurso() {
+//        return recurso;
+//    }
+//
+//    public void setRecurso(List<Recurso> recurso) {
+//        this.recurso = recurso;
+//    }
 
     public String getDiaDaSemana() {
         return diaDaSemana;
@@ -62,9 +81,6 @@ public class Aula {
 
     @Override
     public String toString() {
-        return "Aula{" + "id=" + id + ", materia=" + materia + ", diaDaSemana=" + diaDaSemana + ", arquivo=" + arquivo + ", recurso=" + recurso + ", autor=" + autor + '}';
-    }
-    
-    
-    
+        return "Aula{" + "id=" + id + ", materia=" + materia + ", diaDaSemana=" + diaDaSemana + ", arquivo=" + arquivo + '}';
+    } 
 }

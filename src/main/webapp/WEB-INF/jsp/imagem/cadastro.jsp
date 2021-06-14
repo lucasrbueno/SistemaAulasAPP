@@ -30,7 +30,7 @@
                     <input type="text" class="form-control" name="placeholder" value="PNG descrição">
             </div>
 
-            <button type="submit">Confirmar</button>
+            <button class="btn btn-primary" type="submit">Confirmar</button> 
         </form>
         <br>
             <c:if test="${not empty imagens}">

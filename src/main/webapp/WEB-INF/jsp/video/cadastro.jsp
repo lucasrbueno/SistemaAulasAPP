@@ -31,7 +31,7 @@
                     <input type="radio" name="mp4" value="false"> Não <br>
                 </div>
 
-            <button type="submit">Confirmar</button>
+            <button class="btn btn-primary" type="submit">Confirmar</button> 
         </form>
         <c:if test="${not empty videos}">
             <table class="table table-striped">
