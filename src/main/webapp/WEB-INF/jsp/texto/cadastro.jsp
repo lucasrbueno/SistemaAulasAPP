@@ -22,12 +22,12 @@
             
             <div class="form-group">
               <label>Descrição:</label>
-              <input type="text" class="form-control" name="descricao" value="Descrição padrão">
+              <input type="text" class="form-control" name="descricao" value="Contas de mais e menos">
             </div>			
 
             <div class="form-group">
-                <label>Quanto desse recurso?:</label>
-              <input type="number" class="form-control" name="quantidade" value="2">
+                <label>Quanto desse recurso?</label>
+              <input type="number" class="form-control" name="quantidade" value="1">
             </div>
             
             <div class="form-group">
@@ -53,6 +53,9 @@
               <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Quantidade do recurso?</th>
                     <th>Quantidade de linhas</th>
                     <th>Fonte Usada</th>
                     <th>Link</th>
@@ -63,7 +66,10 @@
                 <c:forEach var="t" items="${textos}">
                     <tr>
                         <td>${t.id}</td>
+                        <td>${t.titulo}</td>
+                        <td>${t.descricao}</td>
                         <td>${t.quantidade}</td>
+                        <td>${t.quantidadeLinhas}</td>
                         <td>${t.fonteLetra}</td>
                         <td>${t.linkReferencia}</td>
                         <td><a href="/texto/${t.id}/excluir">Excluir</a></td>

@@ -14,6 +14,22 @@
         <h1>Cadastro de Imagens</h1>
         
         <form action="/imagem/incluir" method="post"> 
+            
+            <div class="form-group">
+              <label>Titulo:</label>
+              <input type="text" class="form-control" name="titulo" value="Video de História">
+            </div>
+            
+            <div class="form-group">
+              <label>Descrição:</label>
+              <input type="text" class="form-control" name="descricao" value="Imagem de igrejas históricas">
+            </div>			
+
+            <div class="form-group">
+                <label>Quanto desse recurso?</label>
+              <input type="number" class="form-control" name="quantidade" value="1">
+            </div>
+            
             <label>Está em PNG?</label> 
             <div class="form-group">   
                 <input type="radio" name="png" value="true"> Sim <br>
@@ -48,6 +64,9 @@
                     <c:forEach var="i" items="${imagens}">
                         <tr>
                             <td>${i.id}</td>
+                            <td>${i.titulo}</td>
+                            <td>${i.descricao}</td>
+                            <td>${i.quantidade}</td>
                             <td>${i.tamanho}</td>
                             <td>${i.placeholder}</td>
                             <td>${i.png ? 'Sim' : 'Não'}</td>

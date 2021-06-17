@@ -21,7 +21,7 @@
                     <c:forEach var="a" items="${autores}">
                     <option value="${a.id}">${a.nome}</option>
                     </c:forEach>      
-                </select><br><br>
+                </select><br>
             </div>
                 
                 <div class="form-group">
