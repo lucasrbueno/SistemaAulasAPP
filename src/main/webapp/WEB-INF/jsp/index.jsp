@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
     </head>
     <body>
-        <div class="jumbotron text-center">
+<!--        <div class="jumbotron text-center">
             <h1>Projeto de Bloco - AT</h1>
             <h2>Lucas Ramalho Bueno</h2>
             <br>
@@ -17,7 +17,9 @@
             <h3>Bem vindo, ${user.nome}</h3>
             <h3>${user.email}</h3>
             
-        </div>
+        </div>-->
+
+        <header><c:import url="/WEB-INF/jsp/header.jsp"/></header>
         
         <div class="container">
             <div class="row">

@@ -8,7 +8,8 @@
         <title>APP AT PB</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
-    <body>    
+    <body>
+        <header><c:import url="/WEB-INF/jsp/header.jsp"/></header>
         <div class="container">
 
             <h1>Cadastro de Autores</h1>

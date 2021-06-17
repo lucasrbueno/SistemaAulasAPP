@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
+    <header><c:import url="/WEB-INF/jsp/header.jsp"/></header>
     <div class="container">
         <h3>Cadastro de Usuários</h3>
         
