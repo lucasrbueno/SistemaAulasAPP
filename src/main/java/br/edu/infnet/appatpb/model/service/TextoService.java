@@ -17,7 +17,7 @@ public class TextoService {
     }
     
     public List<Texto> obterLista() {
-        return (List<Texto>) textoRepository.findAll();
+        return (List<Texto>) textoRepository.findAllByOrderByTitulo();
     }
 
     public void excluir(Integer id) {

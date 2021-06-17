@@ -17,7 +17,7 @@ public class VideoService {
     }
     
     public List<Video> obterLista() {
-        return (List<Video>) videoRepository.findAll();
+        return (List<Video>) videoRepository.findAllByOrderByTitulo();
     }
 
     public void excluir(Integer id) {

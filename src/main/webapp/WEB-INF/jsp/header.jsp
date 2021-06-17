@@ -18,5 +18,8 @@
             <h3>${user.email}</h3>  
             
             <a href="/home" class="btn btn-primary">Home</a>
+            <a href="/home" class="btn btn-primary">Autores</a>
+            <a href="/home" class="btn btn-primary">Aulas</a>
+            <a href="/home" class="btn btn-primary">Recursos</a>           
     </body>
 </html>

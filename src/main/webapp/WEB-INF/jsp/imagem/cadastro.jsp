@@ -18,7 +18,7 @@
             
             <div class="form-group">
               <label>Titulo:</label>
-              <input type="text" class="form-control" name="titulo" value="Video de História">
+              <input type="text" class="form-control" name="titulo" value="Imagem de História">
             </div>
             
             <div class="form-group">

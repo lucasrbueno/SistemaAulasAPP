@@ -17,7 +17,7 @@ public class ImagemService {
     }
     
     public List<Imagem> obterLista() {
-        return (List<Imagem>) imagemRepository.findAll();
+        return (List<Imagem>) imagemRepository.findAllByOrderByTitulo();
     }
 
     public void excluir(Integer id) {

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import br.edu.infnet.appatpb.model.negocio.Usuario;
 import br.edu.infnet.appatpb.model.repository.IUsuarioRepository;
 import java.util.List;
+import org.springframework.data.domain.Sort;
 
 @Service
 public class UsuarioService {
@@ -13,19 +14,12 @@ public class UsuarioService {
     @Autowired
     private IUsuarioRepository usuarioRepository;
 
-    public String obterStatus(Usuario usuario) {
-
-        return usuario.calcularSalarioAnual() > 999 ? 
-                            usuario.getNome() + ", que pessoa rica" : 
-                                    "Poxa, "+ usuario.getNome()+"!!! Tá difícil, né?!";  
-    }
-
     public void incluir(Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 
     public List<Usuario> obterLista() {
-        return (List<Usuario>) usuarioRepository.findAll();
+        return (List<Usuario>) usuarioRepository.findAllByOrderByNome();
     }
 
     public void excluir(Integer id) {
@@ -36,4 +30,7 @@ public class UsuarioService {
         
         return usuarioRepository.autenticacao(email, senha);
     }
+    
+
+    
 }

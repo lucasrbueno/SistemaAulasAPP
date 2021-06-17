@@ -12,4 +12,5 @@ public interface IAutorRepository extends CrudRepository<Autor, Integer>{
     
     @Query("from Autor au where au.usuario.id =:userid")
     public List<Autor> obterLista(Integer userid, Sort sort);
+
 }
