@@ -40,8 +40,9 @@
 		    <input type="password" class="form-control" id="senha" placeholder="Entre com a senha" name="senha" value="123">
 		  </div>
 		
-		  <button type="submit" class="btn btn-primary">Acessar</button>
+		  <button type="submit" class="btn btn-secondary">Acessar</button>
 		</form>
+                
 	</div>
 
 </body>

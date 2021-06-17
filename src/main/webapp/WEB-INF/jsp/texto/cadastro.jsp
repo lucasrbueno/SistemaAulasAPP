@@ -13,10 +13,26 @@
         
         <h1>Cadastro de Textos</h1>
         
-        <form action="/texto/incluir" method="post">		
+        <form action="/texto/incluir" method="post">	
+            
+            <div class="form-group">
+              <label>Titulo:</label>
+              <input type="text" class="form-control" name="titulo" value="Texto Matemática">
+            </div>
+            
+            <div class="form-group">
+              <label>Descrição:</label>
+              <input type="text" class="form-control" name="descricao" value="Descrição padrão">
+            </div>			
+
+            <div class="form-group">
+                <label>Quanto desse recurso?:</label>
+              <input type="number" class="form-control" name="quantidade" value="2">
+            </div>
+            
             <div class="form-group">
               <label>Quantidade de linhas:</label>
-              <input type="number" class="form-control" name="quantidade" value="20">
+              <input type="number" class="form-control" name="quantidadeLinhas" value="20">
             </div>			
 
             <div class="form-group">

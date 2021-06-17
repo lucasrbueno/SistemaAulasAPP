@@ -1,6 +1,20 @@
 package br.edu.infnet.appatpb.model.negocio;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TRecurso")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Recurso {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     private String descricao;

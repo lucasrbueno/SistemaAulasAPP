@@ -1,9 +1,12 @@
 package br.edu.infnet.appatpb.model.negocio;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +20,14 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
+
+    @OneToMany
+    @JoinColumn(name = "idUsuario")
+    private List<Autor> autores;
+    
+    @OneToMany
+    @JoinColumn(name = "idUsuario")
+    private List<Aula> aulas;
 
     public Usuario() {
 
@@ -40,6 +51,14 @@ public class Usuario {
                             );
     }
 
+    public List<Autor> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(List<Autor> autores) {
+        this.autores = autores;
+    }
+    
     public Integer getId() {
         return id;
     }
@@ -66,6 +85,13 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-        
+
+    public List<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void setAulas(List<Aula> aulas) {
+        this.aulas = aulas;
+    }
         
 }

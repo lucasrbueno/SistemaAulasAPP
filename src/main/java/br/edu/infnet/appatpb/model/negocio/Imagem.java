@@ -4,11 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "TImagem")
-public class Imagem extends Recurso {
+@PrimaryKeyJoinColumn(name = "idRecurso")
+public class Imagem extends Recurso {   
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,11 +1,16 @@
 package br.edu.infnet.appatpb.model.negocio;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "TAula")
@@ -19,8 +24,16 @@ public class Aula {
     private String diaDaSemana;
     private boolean arquivo;
     
-//    private List<Recurso> recurso;
-//    private Autor autor;
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name="idAutor")
+    private Autor autor;
+    
+    @ManyToOne
+    @JoinColumn(name = "idUsuario")
+    private Usuario usuario;
+  
+    @Transient
+    private List<Recurso> recurso;
 
     public Aula() {
     }
@@ -31,14 +44,30 @@ public class Aula {
         this.arquivo = arquivo;
     }
 
-//    public Autor getAutor() {
-//        return autor;
-//    }
-//
-//    public void setAutor(Autor autor) {
-//        this.autor = autor;
-//    }
+    public Autor getAutor() {
+        return autor;
+    }
 
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public List<Recurso> getRecurso() {
+        return recurso;
+    }
+
+    public void setRecurso(List<Recurso> recurso) {
+        this.recurso = recurso;
+    }
+    
     public String getMateria() {
         return materia;
     }
@@ -54,14 +83,6 @@ public class Aula {
     public void setId(Integer id) {
         this.id = id;
     }
-
-//    public List<Recurso> getRecurso() {
-//        return recurso;
-//    }
-//
-//    public void setRecurso(List<Recurso> recurso) {
-//        this.recurso = recurso;
-//    }
 
     public String getDiaDaSemana() {
         return diaDaSemana;

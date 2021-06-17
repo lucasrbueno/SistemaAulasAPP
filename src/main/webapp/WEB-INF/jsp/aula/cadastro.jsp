@@ -14,6 +14,16 @@
             <h1>Cadastro de Aulas</h1>
 
             <form action="/aula/incluir" method="post"> 
+                
+                <div class="form-group">	
+                <label>Autores:</label>		
+                <select name="autor.id" class="form-control">
+                    <c:forEach var="a" items="${autores}">
+                    <option value="${a.id}">${a.nome}</option>
+                    </c:forEach>      
+                </select><br><br>
+            </div>
+                
                 <div class="form-group">
                     <label>Matéria:</label>
                     <input type="text" class="form-control" name="materia" value="Matemática">
@@ -41,6 +51,7 @@
                         <th>Matéria</th>
                         <th>Dia da Semana</th>
                         <th>Arquivo</th>
+                        <th>Autor</th>
                         <th></th>
                     </tr>
                   </thead>
@@ -51,6 +62,7 @@
                             <td>${au.materia}</td>
                             <td>${au.diaDaSemana}</td>
                             <td>${au.arquivo ? 'Sim' : 'Não'}</td>
+                            <td>${au.autor.nome}</td>
                             <td><a href="/aula/${au.id}/excluir">Excluir</a></td>
                         </tr>
                     </c:forEach>
