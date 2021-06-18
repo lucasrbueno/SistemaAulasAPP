@@ -20,7 +20,7 @@
                 <label>Autores:</label>		
                 <select name="autor.id" class="form-control">
                     <c:forEach var="a" items="${autores}">
-                    <option value="${a.id}">${a.nome}</option>
+                        <option value="${a.id}">${a.nome}</option>
                     </c:forEach>      
                 </select><br>
             </div>
@@ -43,33 +43,7 @@
                 
                 <button class="btn btn-primary" type="submit">Confirmar</button> 
             </form>
-            <br>
-            <c:if test="${not empty aulas}">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Matéria</th>
-                        <th>Dia da Semana</th>
-                        <th>Arquivo</th>
-                        <th>Autor</th>
-                        <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <c:forEach var="au" items="${aulas}">
-                        <tr>
-                            <td>${au.id}</td>
-                            <td>${au.materia}</td>
-                            <td>${au.diaDaSemana}</td>
-                            <td>${au.arquivo ? 'Sim' : 'Não'}</td>
-                            <td>${au.autor.nome}</td>
-                            <td><a href="/aula/${au.id}/excluir">Excluir</a></td>
-                        </tr>
-                    </c:forEach>
-                  </tbody>
-                </table>
-            </c:if>
+           
             
         </div>        
     </body>

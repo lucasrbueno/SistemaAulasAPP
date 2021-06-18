@@ -20,14 +20,14 @@ public class UsuarioController {
     
     @GetMapping(value = "/usuario")
     public String telaCadastro() {
-       return "redirect:/usuario/lista";
+       return "usuario/cadastro";
     }    
 
     @PostMapping(value = "/usuario/incluir")
     public String incluir(Usuario usuario) {
         usuarioService.incluir(usuario);
 
-        return "redirect:/usuario/lista";
+        return "redirect:/";
     }
    
     @GetMapping(value = "/usuario/{id}/excluir")
@@ -41,7 +41,7 @@ public class UsuarioController {
     public String obterLista(Model model){   
         model.addAttribute("usuarios", usuarioService.obterLista());
         
-        return "usuario/cadastro";
+        return "usuario/lista";
     }
     
     @PostMapping(value="/usuario/login")

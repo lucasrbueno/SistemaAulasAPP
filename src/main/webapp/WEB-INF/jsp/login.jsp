@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,40 +12,32 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="jumbotron text-center">
+        <h1>Projeto de Bloco - AT</h1>
+        <h2>Lucas Ramalho Bueno</h2>
+        <br>
 
-	<%
-	boolean invalido = false;
-	if(request.getAttribute("invalido") != null){
-		invalido = (Boolean)request.getAttribute("invalido");
-	}
-	%>
+        <h3>Bem vindo ao sistema, novo usuário!</h3>
 
-	<div class="container">
-		<h2>Usuário</h2>
-	  
-	  	<%if(invalido){%>
-		<div class="container">
-		  <div class="alert alert-danger">
-		    <strong>Problema!</strong> Usuário não encontrado!!!
-		  </div>
-		</div>
-	  	<%}%>
-	  
-		<form action="usuario/login" method="post">
-		  <div class="form-group">
-		    <label for="email">E-mail:</label>
-		    <input type="email" class="form-control" id="email" placeholder="Entre com o e-mail" name="email" value="lucas@lucas">
-		  </div>
-		
-		  <div class="form-group">
-		    <label for="senha">Senha:</label>
-		    <input type="password" class="form-control" id="senha" placeholder="Entre com a senha" name="senha" value="123">
-		  </div>
-		
-		  <button type="submit" class="btn btn-secondary">Acessar</button>
-		</form>
-                
-	</div>
+        <a href="/usuario" class="btn btn-primary">Crie seu cadastro!</a>
+    </div> 
+    <div class="container">
+        
+        <h2>Login</h2>
 
+        <form action="usuario/login" method="post">
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" placeholder="Entre com o e-mail" name="email" value="lucas@lucas">
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" id="senha" placeholder="Entre com a senha" name="senha" value="123">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Acessar</button>
+        </form>
+    </div>
 </body>
 </html>

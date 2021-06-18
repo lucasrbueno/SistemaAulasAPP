@@ -24,8 +24,10 @@ public class AulaController{
     private AutorService autorService;
     
     @GetMapping(value = "/aula")
-    public String telaCadastroAula() {
-        return "redirect:/aula/lista";
+    public String telaCadastroAula(Model model, @SessionAttribute("user") Usuario usuario) {
+        model.addAttribute("autores", autorService.obterLista(usuario));
+        
+        return "aula/cadastro";
     }
 
     @PostMapping(value = "/aula/incluir")
@@ -48,8 +50,8 @@ public class AulaController{
     @GetMapping(value = "/aula/lista")
     public String obterLista(Model model, @SessionAttribute("user") Usuario usuario){   
         model.addAttribute("aulas", aulaService.obterLista(usuario));
-        model.addAttribute("autores", autorService.obterLista(usuario));
         
-        return "aula/cadastro";
+        
+        return "aula/lista";
     }
 }

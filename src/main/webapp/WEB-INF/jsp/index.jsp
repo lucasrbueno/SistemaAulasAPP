@@ -5,20 +5,10 @@
 <html>
     <head>
         <title>Tela Inicial</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
     </head>
     <body>
-<!--        <div class="jumbotron text-center">
-            <h1>Projeto de Bloco - AT</h1>
-            <h2>Lucas Ramalho Bueno</h2>
-            <br>
-            
-            <h3>Bem vindo, ${user.nome}</h3>
-            <h3>${user.email}</h3>
-            
-        </div>-->
-
         <header><c:import url="/WEB-INF/jsp/header.jsp"/></header>
         
         <div class="container">
@@ -33,12 +23,12 @@
               </div>
               <div class="col-sm-4">
                 <h3>Cadastros</h3>   
-                ${usuarioQtd} :: <a href="/usuario">Realize o cadastro de usuários</a> <br>
-                ${autorQtd} :: <a href="/autor">Realize o cadastro de autores</a> <br>
-                ${aulaQtd} :: <a href="/aula">Realize o cadastro de aulas</a> <br>
-                ${imagemQtd} :: <a href="/imagem">Realize o cadastro de imagens</a> <br>
-                ${videoQtd} :: <a href="/video">Realize o cadastro de videos</a> <br>
-                ${textoQtd} :: <a href="/texto">Realize o cadastro de textos</a> <br>
+                Usuários :: ${usuarioQtd}  <br> <a href="/usuario/lista">Veja a lista de usuários</a> <br>
+                Autores :: ${autorQtd} :: <br> <a href="/autor">Realize o cadastro de autores</a> <br>
+                Aulas :: ${aulaQtd} :: <br> <a href="/aula">Realize o cadastro de aulas</a> <br>
+                Imagens :: ${imagemQtd} :: <br> <a href="/imagem">Realize o cadastro de imagens</a> <br>
+                Vídeos :: ${videoQtd} :: <br> <a href="/video">Realize o cadastro de videos</a> <br>
+                Textos :: ${textoQtd} :: <br> <a href="/texto">Realize o cadastro de textos</a> <br>
               </div>
             </div>
         </div>       

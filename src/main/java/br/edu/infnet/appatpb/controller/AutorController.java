@@ -19,7 +19,7 @@ public class AutorController{
     
     @GetMapping(value = "/autor")
     public String telaCadastroAutor() {
-        return "redirect:/autor/lista";
+        return "autor/cadastro";
     }
 
     @PostMapping(value = "/autor/incluir")
@@ -28,12 +28,19 @@ public class AutorController{
         
         autorService.incluir(autor);
 
-        return "redirect:/autor/lista";
+        return "redirect:/autor";
     }
     
     @GetMapping(value="/autor/{id}/excluir")
-    public String excluir(@PathVariable Integer id){
-        autorService.excluir(id);
+    public String excluir(Model model, @PathVariable Integer id, @SessionAttribute("user") Usuario usuario){
+        
+        try{
+            autorService.excluir(id);
+        } catch(Exception e) {
+            model.addAttribute("mensagem", "Impossivel excluir, autor atrelado á alguma aula.");
+
+            return obterLista(model, usuario);
+        }
         
         return "redirect:/autor/lista";
     }
@@ -42,6 +49,6 @@ public class AutorController{
     public String obterLista(Model model, @SessionAttribute("user") Usuario usuario){   
         model.addAttribute("autores", autorService.obterLista(usuario));
         
-        return "autor/cadastro";
+        return "autor/lista";
     }
 }

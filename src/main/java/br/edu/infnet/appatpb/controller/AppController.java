@@ -38,7 +38,12 @@ public class AppController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String telaLogin() {
         return "login";
-    }      
+    }
+    
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String telaLogout() {
+        return "redirect:/";
+    }
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String telaIndex(Model model, @SessionAttribute("user") Usuario usuario) {

@@ -11,15 +11,15 @@
     <body>
         <div class="jumbotron text-center">
             <h1>Projeto de Bloco - AT</h1>
-            <h2>Lucas Ramalho Bueno</h2>
-            <br>
-            
-            <h3>Bem vindo, ${user.nome}</h3>
-            <h3>${user.email}</h3>  
+            <h2>Lucas Ramalho Bueno</h2>          
+            <h3>Bem vindo, ${user.nome} (${user.email})!</h3>
             
             <a href="/home" class="btn btn-primary">Home</a>
-            <a href="/home" class="btn btn-primary">Autores</a>
-            <a href="/home" class="btn btn-primary">Aulas</a>
-            <a href="/home" class="btn btn-primary">Recursos</a>           
+            <a href="/usuario/lista" class="btn btn-primary">Usuários</a>
+            <a href="/autor/lista" class="btn btn-primary">Autores</a>
+            <a href="/aula/lista" class="btn btn-primary">Aulas</a>
+            <a href="/recurso/lista" class="btn btn-primary">Recursos</a>      
+            <a href="/logout" class="btn btn-danger">Sair</a>
+            
     </body>
 </html>
