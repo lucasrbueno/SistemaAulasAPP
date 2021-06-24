@@ -25,12 +25,12 @@
         
         <h2>Login</h2>
 
-        <form action="usuario/login" method="post">
+        <form action="/usuario/login" method="post">
             <div class="form-group">           
                       
             <c:if test="${not empty permissao}">
                 <div class="alert alert-danger">
-                        <strong>Warning!</strong> ${permissao}
+                    <strong>Problema!</strong> ${permissao}
                 </div>
             </c:if>
               

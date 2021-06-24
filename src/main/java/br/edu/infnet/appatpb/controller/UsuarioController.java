@@ -56,9 +56,8 @@ public class UsuarioController {
             model.addAttribute("user", usuario);         
             return "redirect:/home";
         } else {
-            model.addAttribute("permissao", "Usuário inválido!");
-//            return ac.telaLogin();
-            return "redirect:/";
+            model.addAttribute("permissao", "Usuário inválido, reinsira seus dados!");
+            return ac.telaLogin();
         }       
     }
 }
