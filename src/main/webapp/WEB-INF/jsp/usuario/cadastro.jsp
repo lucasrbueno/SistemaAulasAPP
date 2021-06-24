@@ -29,7 +29,7 @@
 
                 <div class="form-group">
                     <label>E-mail:</label>
-                    <input type="email" class="form-control" name="email" value="lucas.bueno@prof.infnet.edu.br">
+                    <input type="email" class="form-control" name="email" value="lucas@lucas">
                 </div>
 
                 <div class="form-group">

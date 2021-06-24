@@ -26,7 +26,14 @@
         <h2>Login</h2>
 
         <form action="usuario/login" method="post">
-          <div class="form-group">
+            <div class="form-group">           
+                      
+            <c:if test="${not empty permissao}">
+                <div class="alert alert-danger">
+                        <strong>Warning!</strong> ${permissao}
+                </div>
+            </c:if>
+              
             <label for="email">E-mail:</label>
             <input type="email" class="form-control" id="email" placeholder="Entre com o e-mail" name="email" value="lucas@lucas">
           </div>

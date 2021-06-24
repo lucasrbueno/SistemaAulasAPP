@@ -18,6 +18,9 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
     
+    @Autowired
+    private AppController ac;
+    
     @GetMapping(value = "/usuario")
     public String telaCadastro() {
        return "usuario/cadastro";
@@ -50,11 +53,12 @@ public class UsuarioController {
         Usuario usuario = usuarioService.autenticacao(email, senha);
         
         if(usuario != null) {
-            model.addAttribute("user", usuario);
-            
+            model.addAttribute("user", usuario);         
             return "redirect:/home";
-        }
-        
-        return "redirect:/";
+        } else {
+            model.addAttribute("permissao", "Usuário inválido!");
+//            return ac.telaLogin();
+            return "redirect:/";
+        }       
     }
 }

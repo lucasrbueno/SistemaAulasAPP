@@ -40,7 +40,9 @@
                   </tbody>
                 </table>
             </c:if>    
-        
+            <c:if test="${empty aulas}">
+                <h3>Nenhum aula foi cadastrada!</h3>
+            </c:if>
     </div>	
 </body>
 </html>

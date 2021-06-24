@@ -1,7 +1,6 @@
 package br.edu.infnet.appatpb.model.service;
 
 import br.edu.infnet.appatpb.model.negocio.Recurso;
-import br.edu.infnet.appatpb.model.negocio.Video;
 import br.edu.infnet.appatpb.model.repository.IRecursoRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class RecursoService {
     }
     
     public List<Recurso> obterLista() {
-        return (List<Recurso>) recursoRepository.findAll();
+        return (List<Recurso>) recursoRepository.findAllByOrderByTitulo();
     }
 
     public void excluir(Integer id) {

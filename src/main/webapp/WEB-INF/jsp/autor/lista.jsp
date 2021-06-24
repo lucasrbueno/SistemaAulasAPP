@@ -46,7 +46,9 @@
               </tbody>
             </table>
         </c:if>    
-        
+        <c:if test="${empty autores}">
+            <h3>Nenhum autor foi cadastrado!</h3>
+        </c:if>
     </div>	
 </body>
 </html>

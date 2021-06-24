@@ -36,7 +36,9 @@
               </tbody>
             </table>
         </c:if>    
-        
+        <c:if test="${empty usuarios}">
+            <h3>Nenhum usuario foi cadastrado!</h3>
+        </c:if>
     </div>	
 </body>
 </html>

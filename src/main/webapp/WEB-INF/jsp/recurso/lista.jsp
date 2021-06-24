@@ -38,6 +38,9 @@
               </tbody>
             </table>
         </c:if>
+        <c:if test="${empty recursos}">
+            <h3>Nenhum recurso foi cadastrado!</h3>
+        </c:if>
     </div>	
 </body>
 </html>
